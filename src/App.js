@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Components/UI/Header";
 import RestaurentSummery from "./Components/UI/RestaurentSummery";
 import AvailableMeals from "./Components/UI/AvailableMeals";
+import CartContent from "./Components/UI/CartContent";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <RestaurentSummery />
         <AvailableMeals />
       </main>
+      <CartContent />
     </React.Fragment>
   );
 }

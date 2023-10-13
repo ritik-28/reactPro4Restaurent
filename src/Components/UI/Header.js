@@ -3,12 +3,12 @@ import mealImg from "../meals.jpg";
 import "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <React.Fragment>
       <header className="color_h">
         <h1 className="header_h">ReactMeals</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onShowCart} />
       </header>
       <img src={mealImg} alt="restaurent" className="mealImg" />
     </React.Fragment>

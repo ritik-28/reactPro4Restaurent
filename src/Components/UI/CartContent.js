@@ -1,9 +1,9 @@
 import classes from "./CardContent.module.css";
 import Modal from "./Model";
 
-const CartContent = () => {
+const CartContent = (props) => {
   return (
-    <Modal className={classes.cardContent}>
+    <Modal className={classes.cardContent} hideCart={props.hideCart}>
       <p>Sushi</p>
       <div className={classes.divam}>
         <span>Total Amount</span>
@@ -11,7 +11,9 @@ const CartContent = () => {
       </div>
       <div className={classes.btnGroup}>
         <button className={classes.btnorder}>Order</button>
-        <button className={classes.btnclose}>Close</button>
+        <button className={classes.btnclose} onClick={props.hideCart}>
+          Close
+        </button>
       </div>
     </Modal>
   );

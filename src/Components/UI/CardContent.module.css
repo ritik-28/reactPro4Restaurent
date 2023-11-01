@@ -9,6 +9,45 @@
   display: flex;
   flex-direction: column;
 }
+.money {
+  color: #8a2b06;
+  font-weight: 700;
+}
+
+.quantity {
+  margin-left: 8%;
+  border: 0.5px solid #8a2b06;
+  width: fit-content;
+  border-radius: 3px;
+  text-align: center;
+  display: inline;
+  font-size: medium;
+  color: grey;
+}
+
+.cartPara {
+  color: black;
+  font-size: large;
+  font-weight: 600;
+}
+
+.oneItem {
+  border-bottom: 2px solid #8a2b06;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+.leftItem {
+  width: 50%;
+}
+
+.rightItem {
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .divam {
   display: flex;
@@ -61,5 +100,45 @@
 
 .txtBold {
   color: black;
+  font-size: large;
+  font-weight: 900;
+}
+
+.btnplus {
+  width: 15%;
+  height: 2.2rem;
+  background-color: #8a2b06;
+  text-align: center;
+  font-size: larger;
+  border-radius: 5px;
+  border: 1px;
+  color: white;
   font-weight: bold;
+  margin-left: 10px;
+  float: right;
+}
+
+.btnmin {
+  width: 15%;
+  height: 2.2rem;
+  background-color: white;
+  text-align: center;
+  font-size: larger;
+  border-radius: 5px;
+  border: 1px solid #8a2b06;
+  color: #8a2b06;
+  font-weight: bold;
+  float: right;
+}
+.btnmin:hover,
+.btnmin:active {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+  color: white;
+}
+.btnmin:hover,
+.btnplus:active {
+  background-color: whitesmoke;
+  border-color: #5a1a01;
+  color: #5a1a01;
 }

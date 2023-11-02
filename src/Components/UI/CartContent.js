@@ -7,18 +7,17 @@ import { useContext } from "react";
 const CartContent = (props) => {
   const { cartCtx } = useContext(CartContext);
   let price = 0;
-  let key = (Math.random() + 1).toFixed(2);
   cartCtx.items.forEach((el) => (price = price + el.price * el.quantity));
   return (
     <Modal className={classes.cardContent} hideCart={props.hideCart}>
       {cartCtx.items.map((item) => (
-        <div className={classes.oneItem} key={key}>
+        <div className={classes.oneItem} key={item.id}>
           <div className={classes.leftItem}>
             <p className={classes.cartPara}>{item.name}</p>
             <span className={classes.money}>${item.price}</span>
             <h1 className={classes.quantity}>x{item.quantity}</h1>
           </div>
-          <ItemButton delKey={key} />
+          <ItemButton delKey={item.id} />
         </div>
       ))}
       <div className={classes.divam}>

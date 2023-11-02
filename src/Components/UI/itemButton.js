@@ -4,10 +4,12 @@ import CartContext from "./Store/Cart-Context";
 
 const ItemButton = (props) => {
   const { cartCtx, setCartCtx } = useContext(CartContext);
-  console.log(cartCtx);
-  console.log(props);
-  const minus = (e) => {
-    console.log(e);
+  const minus = () => {
+    const newList = cartCtx.items.filter((item) => item.id !== props.delKey);
+    setCartCtx({
+      ...cartCtx,
+      items: newList,
+    });
   };
   return (
     <div className={classes.rightItem}>
